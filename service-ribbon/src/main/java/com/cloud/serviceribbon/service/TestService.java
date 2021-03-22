@@ -15,4 +15,12 @@ public interface TestService {
      * @return String
      */
     String testService(String paramStr);
+
+    /**
+     * 调用发生错误时的处理
+     *
+     * @param paramStr 请求参数
+     * @return 错误处理
+     */
+    String onError(String paramStr);
 }
