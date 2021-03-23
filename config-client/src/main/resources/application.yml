@@ -1,0 +1,46 @@
+server:
+  port: 8782
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  profiles:
+    active: dev
+
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+---
+spring:
+  profiles: prod
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: prod
+
+---
+spring:
+  profiles: dev
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master                # 指定仓库分支
+      discovery:
+        enabled: true              # 开启
+        service-id: config-server  # 指定配置中心服务端的server-id
+      profile: dev                 # 指定版本,本例中建立了dev 和 prod两个版本
