@@ -44,3 +44,17 @@ spring:
         enabled: true              # 开启
         service-id: config-server  # 指定配置中心服务端的server-id
       profile: dev                 # 指定版本,本例中建立了dev 和 prod两个版本
+#      uri: http://localhost:8781/
+
+---
+spring:
+  profiles: test
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: test

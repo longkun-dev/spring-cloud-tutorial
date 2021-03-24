@@ -13,8 +13,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/iced-cola/spring-cloud-config-center.git
-          username: 766521466@qq.com
-          password: zlk113112
+          uri: https://github.com/iced-cola/spring-cloud-config-center/
+          username:
+          password:
           default-label: master
-          search-paths: config
+          search-paths: settings
