@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/config/client")
 public class TestController {
 
+    // 配置文件的名称为bootstrap.properties
     @Value("${config.param1}")
     private String configParam1;
 
