@@ -1,10 +1,10 @@
-package com.cloud.configserver;
+package com.cloud.servicerocketmqconsumer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigServerApplicationTests {
+class ServiceRocketmqConsumerApplicationTests {
 
     @Test
     void contextLoads() {

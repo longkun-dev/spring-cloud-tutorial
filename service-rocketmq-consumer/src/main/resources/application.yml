@@ -1,0 +1,22 @@
+server:
+  port: 8778
+spring:
+  application:
+    name: service-rocketmq-consumer
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+  rocketmq:
+    consumer:
+      isOnOff: on
+      groupName: ${spring.application.name}
+      namesrvAddr: 127.0.0.1:9876
+      topics: TestTopic~TestTag;TestTopic~HelloTag;HelloTopic~HelloTag;MyTopic~*
+      consumeThreadMin: 5
+      consumeThreadMax: 32
+      consumeMessageBatchMaxSize: 1
+

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/config/server")
 public class ConfigTestController {
 
-//    @Value("${config.param1}")
+    //    @Value("${config.param1}")
     private String configParam1;
 
     @GetMapping("/param1")

@@ -19,6 +19,8 @@
         <module>config-server</module>
         <module>config-client</module>
         <module>service-rabbitmq</module>
+        <module>service-rocketmq-provider</module>
+        <module>service-rocketmq-consumer</module>
     </modules>
 
     <parent>

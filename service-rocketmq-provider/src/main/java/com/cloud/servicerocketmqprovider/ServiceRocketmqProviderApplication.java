@@ -1,13 +1,13 @@
-package com.cloud.servicerabbitmq;
+package com.cloud.servicerocketmqprovider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServiceRabbitmqApplication {
+public class ServiceRocketmqProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceRabbitmqApplication.class, args);
+        SpringApplication.run(ServiceRocketmqProviderApplication.class, args);
     }
 
 }

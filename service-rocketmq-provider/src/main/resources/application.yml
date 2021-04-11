@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: service-rocketmq-provider
+server:
+  port: 8777
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+rocketmq:
+  producer:
+    isOnOff: on
+    groupName: ${spring.application.name}
+    namesrvAddr: 127.0.0.1:9876
+    maxMessageSize: 4096
+    sendMsgTimeOut: 3000
+    retryTimesWhenSendFailed: 2

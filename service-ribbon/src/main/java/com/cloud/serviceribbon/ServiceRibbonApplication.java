@@ -12,8 +12,8 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 @SpringBootApplication
 public class ServiceRibbonApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ServiceRibbonApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ServiceRibbonApplication.class, args);
+    }
 
 }
